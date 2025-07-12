@@ -1,6 +1,6 @@
 use std::{env, error::Error};
 
-const SHA1_HEX_STRING_LENGTH: uszie = 40;
+const SHA1_HEX_STRING_LENGTH: usize = 40;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let args: Vec<String> = env::args().collect();
@@ -16,5 +16,5 @@ fn main() -> Result<(), Box<dyn Error>> {
         return Err("sha1 hash is not valid".into());
     }
 
-    Ok(());
+    Ok(())
 }
